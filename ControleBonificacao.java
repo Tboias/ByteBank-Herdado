@@ -2,19 +2,13 @@ public class ControleBonificacao {
 
     private double soma;
 
-    public void registraBonificacao(Gerente g, Funcionario f, EditorDeVideo editor) {
+    public void registraBonificacao(Funcionario f) {
 
-        double boni = g.getBonificacao();
-        this.soma = this.soma + boni;
+        this.soma = f.getBonificacao();
 
-        double boniF = f.getBonificacao();
-        this.soma = this.soma + boniF;
-
-        double boniEditor = f.getBonificacao();
-        this.soma = this.soma + boniEditor;
     }
 
-    public double getSoma() {
+    public double getSomaBonificacao() {
         return soma;
     }
 }
